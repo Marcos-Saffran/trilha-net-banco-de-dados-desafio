@@ -111,5 +111,14 @@ INNER JOIN Generos g ON g.Id = fg.IdGenero
 WHERE 
 	g.Genero LIKE 'Mistério';
 
-
+-- 12 - Buscar o nome do filme e os atores, trazendo o PrimeiroNome, UltimoNome e seu Papel
+SELECT
+	f.Nome,
+	a.PrimeiroNome,
+	a.UltimoNome,
+	ef.Papel
+FROM 
+	Filmes f
+INNER JOIN ElencoFilme ef ON ef.IdFilme = f.Id
+INNER JOIN Atores a ON a.Id = ef.IdAtor;
 
