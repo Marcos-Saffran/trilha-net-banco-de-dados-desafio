@@ -71,6 +71,15 @@ GROUP BY
 ORDER BY
 	SUM(Duracao) DESC;
 
+-- 8 - Buscar os Atores do gênero masculino, retornando o PrimeiroNome, UltimoNome
+SELECT
+	PrimeiroNome,
+	UltimoNome
+FROM
+	Atores
+WHERE
+	UPPER(Genero) = 'M';
+
 
 
 	
